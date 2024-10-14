@@ -77,6 +77,7 @@ We can notice Security and performance features are lacking in Containers when c
 ## Which one should we use?
 
 Choosing between physical servers, virtualization, and containers depends on what you need:
+
 **Physical Servers:**
 * Use them for specific tasks that need direct access to hardware (like high-performance tasks).
 * They are not used as much now because they are costly and waste resources.
