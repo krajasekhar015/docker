@@ -64,15 +64,17 @@ docker ps
 ```
 docker images
 ```
-*3. To pull the images from docker repository/hub
+*3. To pull the images from docker repository/hub*
 ```
 docker pull image-name
 ```
-We can signup in `docker hub` website
+> NOTE
+When we don't mention the version, then it will take latest version by default
+
+We can signup in `docker-hub` website
 * From here, we can pull the images that we required.
 * Suppose if we pushed our customized image to docker hub and same like another person also pushed their image with same name to the docker hub then we will get confuse by this. So, docker gives path format `username/image-name:version`  
 * Using this format, we can push our images to docker hub
-
-
+*4. To create docker image*
 
 
