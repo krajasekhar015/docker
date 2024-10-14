@@ -21,10 +21,10 @@ In the past, companies used physical servers to run their applications. A physic
 Virtualization allows us to run many virtual machines (VMs) on a single physical server. A VM is like a separate computer inside a server, with its own operating system.
 
 **Key Benefits:**
-**Better Use of Resources:** Many VMs can share the resources of one server, making it more efficient.
-**Cost Savings:** Fewer physical servers are needed, reducing hardware costs.
-**Flexibility:** VMs can be created, removed, or moved easily from one server to another.
-**Security:** VMs are isolated from each other, so problems in one VM won’t affect the others.
+* **Better Use of Resources:** Many VMs can share the resources of one server, making it more efficient.
+* **Cost Savings:** Fewer physical servers are needed, reducing hardware costs.
+* **Flexibility:** VMs can be created, removed, or moved easily from one server to another.
+* **Security:** VMs are isolated from each other, so problems in one VM won’t affect the others.
 
 **Popular Virtualization Tools:**
 * VMware
@@ -37,10 +37,10 @@ Virtualization allows us to run many virtual machines (VMs) on a single physical
 Containerization allows us to package applications and their dependencies into small, portable containers. Unlike VMs, containers share the same operating system, making them faster and more lightweight.
 
 **Why Containers Are Better:**
-**Faster and Smaller:** Containers start quickly and use fewer resources than VMs.
-**Portable:** Containers can run the same way across different environments (like development, testing, and production).
-**Great for Scaling:** Containers are perfect for applications that need to grow and handle more traffic.
-**Efficient Use of Resources:** More containers can run on the same hardware compared to VMs.
+* **Faster and Smaller:** Containers start quickly and use fewer resources than VMs.
+* **Portable:** Containers can run the same way across different environments (like development, testing, and production).
+* **Great for Scaling:** Containers are perfect for applications that need to grow and handle more traffic.
+* **Efficient Use of Resources:** More containers can run on the same hardware compared to VMs.
 
 **Popular Container Tools:**
 * Docker
