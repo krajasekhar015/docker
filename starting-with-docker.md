@@ -130,11 +130,23 @@ docker run -d image-name
 ```
 Here, `-d` represents detached mode. When this flag is used, the container runs in the background, allowing you to continue using the terminal.
  
+*11. To access specific ports*
+> How can we access nginx running inside the container?
 
+* Container is like a nano/mini server. It also have 0-65,535 ports
+* When we install nginx in VM, we can access it in browser through IP Address:80
+* But here, the first request comes to host-port from the user and it will be mappped to container-port.
 
-How can we access nginx running inside the container?
+```
+docker run -d -p 80:80 image-name
+```
+Here `-p` will map `container ports` to `host ports`
 
-When we install nginx in VM, we can access it in browser through IP Address:80
+Now, we can access nginx in the browser.
+
+> Here, we can give any port for the `host-port`
+
+* Using one image, we can create many containers. We can place different websites in different containers using one image.
 
 
 
