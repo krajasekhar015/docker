@@ -54,7 +54,7 @@ We can assume,
 * Multi floor apartment as Virtual Machine
 * A single room as container
 
-![alt text](image-3.png)
+![alt text](images/comparision.png)
 
 
 
