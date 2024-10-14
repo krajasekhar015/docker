@@ -38,4 +38,11 @@ systemctl start docker
 ```
 systemctl status docker
 ```
+`when docker is installed a group called docker is created.`
 
+ We know that without sudo access, docker commands won't work. If we want to run docker commands from normal user (ec2-user), then add `ec2-user` to the docker group as secondary group
+ 
+```
+sudo usermod -aG docker ec2-user
+```
+After applying this command it won't not get refelected immediately. So exit once and login again to see changes. Now, we can run docker commands without sudo access. 
