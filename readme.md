@@ -9,6 +9,10 @@ Now a days everywhere we are talking about Microservices. These microservice app
 
 In the past, companies used physical servers to run their applications. A physical server is a large computer that runs a specific application. Each server had its own CPU, memory, and storage, which often left many resources unused.
 
+Bare metal server usually has more resources. Usually these servers were not shared among projects because of security. We need to buy the server, install OS, supply power and network connections, physical space, cooling, etc. Provisioning time of the server is very high.
+
+Most of the hardware is wasted apart from the application use.
+
 **Key Points:**
 * **One Server, One Job:** Each server was dedicated to a single application.
 * **Wasteful:** Servers were often underused, wasting resources like CPU and memory.
@@ -18,7 +22,7 @@ In the past, companies used physical servers to run their applications. A physic
 
 ![alt text](images/VM-Architecture.jpg)
 
-Virtualization allows us to run many virtual machines (VMs) on a single physical server. A VM is like a separate computer inside a server, with its own operating system.
+`Virtual Machine` is a revolutionary technology back in time from the perspective of applications. Entire cloud computing VM’s are based of virtualization. Using this we are able to logically divide a big bare mental server into multiple servers with different Operating system as Guest OS. There is a clear isolation in the servers so different project can use these VM’s to host their applications.
 
 **Key Benefits:**
 * **Better Use of Resources:** Many VMs can share the resources of one server, making it more efficient.
@@ -58,9 +62,9 @@ This complete suit is called `image`. Underlying Host OS can be anything but thi
 ## Comparison: Physical Servers, Virtualization, and Containers
 
 We can assume,
-* `Bare metal servers` as independent landed houses
-* `Virtual Machine` as multi floor apartment
-* `Container` as a single room 
+* `Bare metal servers` as independent landed houses (Joint Family)
+* `Virtual Machine` as multi floor apartment (Family)
+* `Container` as a single room (Bachelor)
 
 ![alt text](images/comparision.png)
 
