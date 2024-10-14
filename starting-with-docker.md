@@ -138,15 +138,17 @@ Here, `-d` represents detached mode. When this flag is used, the container runs 
 * But here, the first request comes to host-port from the user and it will be mappped to container-port.
 
 ```
-docker run -d -p 80:80 image-name
+docker run -d -p host-port:container-port image-name
 ```
-Here `-p` will map `container ports` to `host ports`
+Here `-p` represents port-forwarding which will map `container ports` to `host ports`
+
+`-p` option is essential for accessing services running in a container from outside the container
 
 Now, we can access nginx in the browser.
 
 > Here, we can give any port for the `host-port`
 
-* Using one image, we can create many containers. We can place different websites in different containers using one image.
+Using one image, we can create many containers. We can place different websites in different containers using one image.
 
 
 
