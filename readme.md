@@ -50,9 +50,9 @@ Containerization allows us to package applications and their dependencies into s
 ## Comparison: Physical Servers, Virtualization, and Containers
 
 We can assume,
-* Bare metal servers as independent landed houses
-* Multi floor apartment as Virtual Machine
-* A single room as container
+* `Bare metal servers` as independent landed houses
+* `Virtual Machine` as multi floor apartment
+* `Container` as a single room 
 
 ![alt text](images/comparision.png)
 
