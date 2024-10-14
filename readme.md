@@ -74,4 +74,21 @@ Let’s compare the features among Bare metal, VM and Containers from Applicatio
 
 We can notice Security and performance features are lacking in Containers when compared to bare metal. Here, we can achieve security and performance using some methods.
 
+## Which one should we use?
 
+Choosing between physical servers, virtualization, and containers depends on what you need:
+**Physical Servers:**
+* Use them for specific tasks that need direct access to hardware (like high-performance tasks).
+* They are not used as much now because they are costly and waste resources.
+
+**Virtualization:**
+* Great if you need to run different operating systems on the same hardware.
+* It helps you save money and better use your servers.
+
+**Containerization:**
+* Ideal for modern applications that need to be fast, portable, and easy to scale.
+* Perfect for companies using microservices, where each part of an application is in its own container.
+
+## Conclusion
+
+From physical servers to virtualization and now containers, the way we manage applications has become smarter and more efficient. Each of these technologies has its place, but containerization is the current favorite for its speed, flexibility, and resource savings.
