@@ -100,6 +100,7 @@ docker stop container-id
 ```
 docker rm container-id
 ```
+before running this command, we need to stop the container
 ```
 docker rm -f container-id
 ```
@@ -111,7 +112,13 @@ dcoker rmi image-id
 ```
 Here `i` represents image
 
-*9. 
+*9. To pull image and create container and start it will single command
+```
+docker run image-name
+```
+Here docker run command internally pulls the docker image and it will create container and gets started
+
+`docker run = docker pull + create + start`
 
 
 
