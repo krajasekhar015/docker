@@ -66,7 +66,7 @@ We can assume,
 
 Let’s compare the features among Bare metal, VM and Containers from Application perspective
 
-![alt text](images/comparision-2.png)
+![alt text](images/comparision-1.png)
 
 We can notice Security and performance features are lacking in Containers when compared to bare metal. Here, we can achieve security and performance using some methods.
 
