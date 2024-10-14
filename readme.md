@@ -1,4 +1,4 @@
-# physical servers, virtualization, and containerization
+# Physical Servers, Virtualization, and Containerization
 Previsouly we have seen Java applications as EAR(Enterprise archive), WAR(Web Archive) files. Memory of these applications are quite high. We deployed them into Bare metal servers (physical servers).
 
 Now a days everywhere we are talking about Microservices. These microservice applications are very thin in size. Containers are the best choice to deploy these microservices because of its smaller in size.
@@ -36,6 +36,14 @@ Virtualization allows us to run many virtual machines (VMs) on a single physical
 
 Containerization allows us to package applications and their dependencies into small, portable containers. Unlike VMs, containers share the same operating system, making them faster and more lightweight.
 
+From Application point of view, we don’t care about the underlying OS. All we need is application should run properly with minimum resources. Ofcourse security should be taken care.
+
+**Working in DEV but not working in PROD is the universal problem**. This is because we often take more care of PROD servers but not DEV servers. So there is always a mismatch between the packages and their versions among NON-PROD and PROD servers.
+
+We can create application as a complete suit of `**OS + Packages required + Application Runtime + Application Code**`
+
+This complete suit is called `image`. Underlying Host OS can be anything but this image works exactly same in all environments. OS used by images can be bare minimum usually will not have unnecessary packages.
+
 **Why Containers Are Better:**
 * **Faster and Smaller:** Containers start quickly and use fewer resources than VMs.
 * **Portable:** Containers can run the same way across different environments (like development, testing, and production).
@@ -56,6 +64,10 @@ We can assume,
 
 ![alt text](images/comparision.png)
 
+Let’s compare the features among Bare metal, VM and Containers from Application perspective
 
+![alt text](images/comparision-2.png)
+
+We can notice Security and performance features are lacking in Containers when compared to bare metal. Here, we can achieve security and performance using some methods.
 
 
