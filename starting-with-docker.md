@@ -56,13 +56,23 @@ After applying this command, it will not get refelected immediately. So, exit on
 
 ## Docker Commands
 
-*To check the running containers*
+*1. To check the running containers*
 ```
 docker ps
 ```
-*To display docker images that are available in server*
+*2. To display docker images that are available in server*
 ```
 docker images
 ```
+*3. To pull the images from docker repository/hub
+```
+docker pull image-name
+```
+We can signup in `docker hub` website
+* From here, we can pull the images that we required.
+* Suppose if we pushed our customized image to docker hub and same like another person also pushed their image with same name to the docker hub then we will get confuse by this. So, docker gives path format `username/image-name:version`  
+* Using this format, we can push our images to docker hub
+
+
 
 
