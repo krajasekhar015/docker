@@ -47,9 +47,12 @@ sudo usermod -aG docker ec2-user
 ```
 After applying this command, it will not get refelected immediately. So, exit once and login again to see changes. Now, we can run docker commands without sudo access.
 
-> NOTE
-In AWS, when we run AMI then we call it as instance (VM is the running instance of AMI)
-In Docker, when we run image then we call it as container (Container is the running instance of image) 
+**Points to Remember**
+
+* In AWS, when we run AMI then we call it as instance (VM is the running instance of AMI)
+* In Docker, when we run image then we call it as container (Container is the running instance of image)
+* Image is a static file and it has some memory. We can run one docker image in any number of servers
+
 
 **3. Docker Commands**
 
