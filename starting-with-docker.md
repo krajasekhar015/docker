@@ -60,5 +60,9 @@ After applying this command, it will not get refelected immediately. So, exit on
 ```
 docker ps
 ```
+*To display docker images that are available in server*
+```
+docker images
+```
 
 
