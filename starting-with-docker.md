@@ -68,7 +68,7 @@ docker images
 ```
 docker pull image-name
 ```
-> NOTE
+> NOTE <br>
 When we don't mention the version, then it will take latest version by default
 
 We can signup in `docker-hub` website
