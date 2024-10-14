@@ -40,7 +40,7 @@ From Application point of view, we don’t care about the underlying OS. All we 
 
 **Working in DEV but not working in PROD is the universal problem**. This is because we often take more care of PROD servers but not DEV servers. So there is always a mismatch between the packages and their versions among NON-PROD and PROD servers.
 
-We can create application as a complete suit of `**OS + Packages required + Application Runtime + Application Code**`
+We can create application as a complete suit of `<b>OS + Packages required + Application Runtime + Application Code`
 
 This complete suit is called `image`. Underlying Host OS can be anything but this image works exactly same in all environments. OS used by images can be bare minimum usually will not have unnecessary packages.
 
