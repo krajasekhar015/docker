@@ -116,7 +116,7 @@ Here `i` represents image
 ```
 docker run image-name
 ```
-> This commands run in foreground. So, that it will block the screen
+> This commands run in foreground. So that, it will block the screen
 
 Here docker run command internally pulls the docker image and it will create container and gets started automatically
 
@@ -124,7 +124,11 @@ Here docker run command internally pulls the docker image and it will create con
 
 *10. To run a container in background*
 ```
-docker 
+docker run -d image-name
+```
+Here, `-d` represents detached mode. When this flag is used, the container runs in the background, allowing you to continue using the terminal.
+
+
 
 
 
