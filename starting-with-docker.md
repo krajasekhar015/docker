@@ -112,13 +112,18 @@ dcoker rmi image-id
 ```
 Here `i` represents image
 
-*9. To pull image and create container and start it will single command
+*9. To pull image and create container and start it will single command*
 ```
 docker run image-name
 ```
-Here docker run command internally pulls the docker image and it will create container and gets started
+> This commands run in foreground. So, that it will block the screen
+Here docker run command internally pulls the docker image and it will create container and gets started automatically
 
 `docker run = docker pull + create + start`
+
+*10. To run a container in background*
+```
+docker 
 
 
 
