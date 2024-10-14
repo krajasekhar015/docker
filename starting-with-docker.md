@@ -60,6 +60,10 @@ After applying this command, it will not get refelected immediately. So, exit on
 ```
 docker ps
 ```
+```
+docker ps -a
+```
+Here, `-a` represents all
 *2. To display docker images that are available in server*
 ```
 docker images
@@ -68,13 +72,46 @@ docker images
 ```
 docker pull image-name
 ```
-> NOTE <br>
-When we don't mention the version, then it will take latest version by default
+> NOTE: <br>
+If we don't mention the version, then it will take latest version by default
 
 We can signup in `docker-hub` website
 * From here, we can pull the images that we required.
 * Suppose if we pushed our customized image to docker hub and same like another person also pushed their image with same name to the docker hub then we will get confuse by this. So, docker gives path format `username/image-name:version`  
 * Using this format, we can push our images to docker hub
-*4. To create docker image*
+
+*4. To create container from docker image*
+```
+docker create image-name:version
+```
+or
+```
+docker create image-id
+```
+*5. To run container*
+```
+docker start container-id
+```
+*6. To stop container*
+```
+docker stop container-id
+```
+*7. To remove container*
+```
+docker rm container-id
+```
+```
+docker rm -f container-id
+```
+Here `-f` represents forcefully which will remove running container without stopping it
+
+*8. To remove images*
+```
+dcoker rmi image-id
+```
+Here `i` represents image
+
+*9. 
+
 
 
