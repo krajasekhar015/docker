@@ -117,6 +117,7 @@ Here `i` represents image
 docker run image-name
 ```
 > This commands run in foreground. So, that it will block the screen
+
 Here docker run command internally pulls the docker image and it will create container and gets started automatically
 
 `docker run = docker pull + create + start`
