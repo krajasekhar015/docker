@@ -127,8 +127,12 @@ Here docker run command internally pulls the docker image and it will create con
 docker run -d image-name
 ```
 Here, `-d` represents detached mode. When this flag is used, the container runs in the background, allowing you to continue using the terminal.
+> How can you run a container in backgroung? 
 
 
+How can we access nginx running inside the container?
+
+When we install nginx in VM, we can access it in browser through IP Address:80
 
 
 
