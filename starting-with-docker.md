@@ -150,5 +150,37 @@ Now, we can access nginx in the browser.
 
 Using one image, we can create many containers. We can place different websites in different containers using one image.
 
+*12. To login to container*
+> How to get access to running container?
 
+```
+docker exec -it container-id bash
+```
+Here, `exec` represents execute and `-it` represents interactive terminal 
 
+Now, we are inside the container
+
+* Here, we can go to the path `/usr/share/nginx/html/` and remove the default `index.html` page 
+* Create a simple index.html with command `echo "<h1>Hi, Iam from CONATAINER</h1>" > index.html`
+* Now, if we access it on browser, we will get this message `Hi, Iam from CONATAINER` on the screen
+
+*13. To get full details of container*
+```
+docker inspect container-id
+```
+
+*14. To get logs of container*
+```
+docker logs container-id
+```
+
+*15. To set name for container*
+```
+docker run -d -p host-port:container-port --name container-name image-name
+```
+By default, docker will set random name to container by picking two names from dictionary and it will combine them by underscore
+
+We can check everything by using container name
+
+## Docker File
+A Dockerfile is a text document that contains a series of instructions for building a Docker image.
