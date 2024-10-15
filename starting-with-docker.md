@@ -26,7 +26,7 @@ yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.r
 
 To install the latest version, run:
 ```
-yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
 
 **start docker**
@@ -136,6 +136,8 @@ Here, `-d` represents detached mode. When this flag is used, the container runs 
 * Container is like a nano/mini server. It also have 0-65,535 ports
 * When we install nginx in VM, we can access it in browser through IP Address:80
 * But here, the first request comes to host-port from the user and it will be mappped to container-port.
+
+![alt text](images/port-forwarding.jpg)
 
 ```
 docker run -d -p host-port:container-port image-name
