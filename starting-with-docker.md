@@ -185,3 +185,12 @@ By default, docker will set random name to container by picking two names from d
 
 We can check everything by using container name
 
+**16. To build docker image**
+```
+docker build -t image-name:version .
+```
+Here, 
+* `.` represents current folder where we have dockerfile
+* `-t` represents tagging
+* We can give any name (image-name) and any version
+
