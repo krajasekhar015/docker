@@ -64,6 +64,7 @@ docker ps
 docker ps -a
 ```
 Here, `-a` represents all
+
 *2. To display docker images that are available in server*
 ```
 docker images
