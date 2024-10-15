@@ -56,7 +56,7 @@ After applying this command, it will not get refelected immediately. So, exit on
 
 ## Docker Commands
 
- * **1. To check the running containers** * 
+** *1. To check the running containers* **  
 ```
 docker ps
 ```
