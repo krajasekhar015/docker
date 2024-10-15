@@ -56,7 +56,7 @@ After applying this command, it will not get refelected immediately. So, exit on
 
 ## Docker Commands
 
-** *1. To check the running containers* **  
+**1. To check the running containers**  
 ```
 docker ps
 ```
@@ -65,11 +65,11 @@ docker ps -a
 ```
 Here, `-a` represents all
 
-*2. To display docker images that are available in server*
+**2. To display docker images that are available in server**
 ```
 docker images
 ```
-*3. To pull the images from docker repository/hub*
+**3. To pull the images from docker repository/hub**
 ```
 docker pull image-name
 ```
@@ -81,7 +81,7 @@ We can signup in `docker-hub` website
 * Suppose if we pushed our customized image to docker hub and same like another person also pushed their image with same name to the docker hub then we will get confuse by this. So, docker gives path format `username/image-name:version`  
 * Using this format, we can push our images to docker hub
 
-*4. To create container from docker image*
+**4. To create container from docker image**
 ```
 docker create image-name:version
 ```
@@ -89,15 +89,15 @@ or
 ```
 docker create image-id
 ```
-*5. To run container*
+**5. To run container**
 ```
 docker start container-id
 ```
-*6. To stop container*
+**6. To stop container**
 ```
 docker stop container-id
 ```
-*7. To remove container*
+**7. To remove container**
 ```
 docker rm container-id
 ```
@@ -107,13 +107,13 @@ docker rm -f container-id
 ```
 Here `-f` represents forcefully which will remove running container without stopping it
 
-*8. To remove images*
+**8. To remove images**
 ```
 dcoker rmi image-id
 ```
 Here `i` represents image
 
-*9. To pull image and create container and start it will single command*
+**9. To pull image and create container and start it will single command**
 ```
 docker run image-name
 ```
@@ -123,7 +123,7 @@ Here docker run command internally pulls the docker image and it will create con
 
 `docker run = docker pull + create + start`
 
-*10. To run a container in background*
+**10. To run a container in background**
 > How can you run a container in background?
 
 ```
@@ -131,7 +131,7 @@ docker run -d image-name
 ```
 Here, `-d` represents detached mode. When this flag is used, the container runs in the background, allowing you to continue using the terminal.
  
-*11. To access specific ports*
+**11. To access specific ports**
 > How can we access nginx running inside the container?
 
 * Container is like a nano/mini server. It also have 0-65,535 ports
@@ -153,7 +153,7 @@ Now, we can access nginx in the browser.
 
 Using one image, we can create many containers. We can place different websites in different containers using one image.
 
-*12. To login to container*
+**12. To login to container**
 > How to get access to running container?
 
 ```
@@ -167,17 +167,17 @@ Now, we are inside the container
 * Create a simple index.html with command `echo "<h1>Hi, Iam from CONATAINER</h1>" > index.html`
 * Now, if we access it on browser, we will get this message `Hi, Iam from CONATAINER` on the screen
 
-*13. To get full details of container*
+**13. To get full details of container**
 ```
 docker inspect container-id
 ```
 
-*14. To get logs of container*
+**14. To get logs of container**
 ```
 docker logs container-id
 ```
 
-*15. To set name for container*
+**15. To set name for container**
 ```
 docker run -d -p host-port:container-port --name container-name image-name
 ```
