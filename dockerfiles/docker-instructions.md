@@ -124,13 +124,45 @@ Using `docker inspect imageid` we can see the labels that we specified
 **5. EXPOSE** : 
 * The `EXPOSE` instruction informs Docker that the container listens on the specified network ports at runtime
 * You can specify whether the port listens on TCP or UDP, and the default is TCP if you don't specify a protocol
-* 
+* The EXPOSE instruction doesn't actually publish the port
+* It functions as a type of documentation between the person who builds the image and the person who runs the container
+
+```
+EXPOSE portno/protocol
+```
+
+**Example**
+```
+EXPOSE 80
+```
+
+**6. ENV** : Sets environment variables in the image
+* The `ENV` instruction sets the environment variable `<key>` to the value `<value>`
+* These can be used inside container 
+
+```
+ENV key=value
+```
+
+**Example**
+```
+ENV course="devOps with AWS" \
+	trainer="sivakumar" \
+	duration="2hrs"
+```
+* When we build `docker build -t env:v1 .` and run `docker run env:v1` it won't run since we haven't given as instruction to run.
+* If we use `docker ps -a`, there we can see that it has run default command "/bin/bash". It won't run container for infinite times. 
+* So let us make it sleep for 100 seconds using `docker run -d env:v1 sleep 100` 
+* Now, if we check the sleep command has been executed here and it will run for 100 seconds and get exited
+* Within this 100 seconds, we can login to the container `docker exec -it containerid bash` and we can see environment variables which we have passed using `env` 
+
+
 
 
 * **COPY** : Copies files or directories from the host machine to the image
 * **ADD** : Similar to `COPY`, but also supports extracting tar files and fetching files from URLs
 * 
 * **ENTRYPOINT** : Configures a container to run as an executable. It allows you to set default parameters for the container
-* **ENV** : Sets environment variables in the image
+* 
 * 
 * **WORKDIR** : Sets the working directory for subsequent instructions
