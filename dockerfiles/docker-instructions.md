@@ -53,6 +53,7 @@ RUN dnf install nginx -y
 * It keeps container running
 * We can specify the CMD instruction using shell or exec forms
 * There can only be one `CMD` instruction in a Dockerfile. If you list more than one `CMD`, only the last one takes effect
+* `CMD` instruction can be overridden at runtime
 
 **Explanation**
 * For example, in VM's to start backend, we use `systemctl start backend` command. Usually it run for infinite time if there is no problem in server
@@ -185,15 +186,101 @@ ADD <url> /usr/share/nginx/html/index.html
 Here, due to security reasons we can't access it since we have downloaded from internet. So, we need to give read access to all users 
 
 
+**9. ENTRYPOINT** : Configures a container to run as an executable
+* `ENTRYPOINT` instruction allows you to set default parameters for the container
+* `ENTRYPOINT` instruction cannot be overridden like CMD `instruction`. If we try to override, then it will append to the `ENTRYPOINT` instruction
+* For better results and best practices, we can use both of them together.
+     * `CMD` instruction can provide arguments to `ENTRYPOINT` instruction. So, we can pass default arguments through `CMD` instruction and we can override them at run-time 
 
+```
+ENTRYPOINT ["executable","param"]
+```
+**Example**
+```
+CMD ["google.com"]
+ENTRYPOINT ["ping"]
+```
+**Explanation**
+```
+ping google.com
+```
+It will send continuous packets until you stop it
+```
+ping -c 2 google.com
+```
+Here, `-c 2` specifies that you want to send 2 packets. In other words, it limits the number of pings to just two
 
+**10. USER**
+* The `USER` instruction sets the user name (or UID) and optionally the user group (or GID) to use as the default user and group for the remainder of the current stage
+* The specified user is used for `RUN` instructions and at runtime, runs the relevant `ENTRYPOINT` and `CMD` commands
+* For security you should not run containers using root user, it must be on normal user
+> Container is a part of the host so it doesn't have seperate storage. 
+* If we given root access to container it can access host and can get some secuirty issues
+```
+USER username
+```
+**Example**
+```
+USER expense
+```
+
+**11. WORKDIR** : Sets the working directory for subsequent instructions
+* `WORKDIR` instruction is used to set the current working directory inside docker image
+* `cd` command won't work in docker, so we are using `WORKDIR` instruction
+```
+WORKDIR /path/to/workdir
+```
+**Example**
+```
+WORKDIR /tmp/docker
+```
+**Command to find file in linu**
+```
+find / -iname "hello.txt"
+```
+Here, this command will find `hello.txt` file in linux server
+
+**12. ARG**
+* `ARG` instruction is used to set the variables at build time only but not inside the container
+```
+ARG key=value
+```
 
 **Example**
 ```
-ADD 
+ARG course="devOps with AWS" \
+	trainer="sivakumar" \
+	duration="2hrs"
+```
+**Overridding default values of ARG**
+```
+docker build -t arg:v1 --build-arg course=docker
+```
+**ARG vs CMD**
+* `ENV` variables can be accessed both in image build time and in container  
+* `ARG` is only accessed at the time of image creation 
+* You can use `ARG` instruction before `FROM` instruction in one special case i.e., to supply version to the bash image 
+* `ARG` instruction before `FROM` instruction is only valid until FROM, it can't be accessed after FROM instruction
 
+**How can I access ARG values inside container?**
+We can set arg value to env variable
+```
+ENV duration=$duration
+```
+**Interview Questions**
+RUN vs CMD  |  CMD vs ENTRYPOINT  |  ADD vs COPY  |  ARG vs ENV
 
-
-
-**ENTRYPOINT** : Configures a container to run as an executable. It allows you to set default parameters for the container
-**WORKDIR** : Sets the working directory for subsequent instructions
+**13. ONBUILD**
+* The `ONBUILD` instruction adds to the image a trigger instruction to be executed at a later time, when the image is used as the base for another build
+* It is used to trigger few instructions at build when a user is using our image
+* When the image author builds, it won't trigger the `ONBUILD` instruction.
+```
+ONBUILD trigger-instruction
+```
+**Example**
+```
+ONBUILD COPY index.html /usr/share/nginx/html/index.html
+```
+***Explanation**
+* Here, onbuild instruction runs only, when any user uses the image and it will throw an error saying that copy their own index.html to that location.
+* To test this, create a folder with `index.html` file and `Dockerfile` and in `Dockerfile` use base image as our image 
