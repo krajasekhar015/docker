@@ -180,6 +180,16 @@ ADD src dest
 
 **Example**
 ```
+ADD <url> /usr/share/nginx/html/index.html
+```
+Here, due to security reasons we can't access it since we have downloaded from internet. So, we need to give read access to all users 
+
+
+
+
+
+**Example**
+```
 ADD 
 
 
