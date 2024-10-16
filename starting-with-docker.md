@@ -69,6 +69,10 @@ Here, `-a` represents all, which means it list all Docker containers (both runni
 docker ps -a -q
 ```
 Here, `-q` represents quiet mode, which means it only returns the container IDs without any additional information
+```
+docker ps -a --no-trunc
+```
+Here `--no-trunc` prevents Docker from truncating (shortening) the output of the container IDs, names, and other information. It displays the full information, which can be useful for identifying containers more easily. 
 
 **2. To display docker images that are available in server**
 ```
@@ -185,6 +189,10 @@ docker inspect container-id
 ```
 docker logs container-id
 ```
+```
+docker logs -f container-id
+```
+Here, `-f` stands for "follow". It allows you to view the logs in real-time, meaning you can see new log entries as they are generated
 
 **15. To set name for container**
 ```
