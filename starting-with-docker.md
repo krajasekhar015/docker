@@ -64,6 +64,10 @@ docker ps
 docker ps -a
 ```
 Here, `-a` represents all
+```
+docker ps -a -q
+```
+Here, `-q` represents quiet mode, which means it only returns the container IDs without any additional information
 
 **2. To display docker images that are available in server**
 ```
@@ -193,4 +197,11 @@ Here,
 * `.` represents current folder where we have dockerfile
 * `-t` represents tagging
 * We can give any name (image-name) and any version
+
+**17. To re-tag dockerimage**
+```
+docker tag source_image_name:tag target_image_name:tag
+```
+Here tag represents the version of the dcoker image
+
 
