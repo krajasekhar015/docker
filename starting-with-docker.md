@@ -111,6 +111,10 @@ before running this command, we need to stop the container
 docker rm -f container-id
 ```
 Here `-f` represents forcefully which will remove running container without stopping it
+```
+docker rm -f $(docker ps -a -q)
+```
+Here, it will remove all containers (both running and stopped)
 
 **8. To remove images**
 ```
