@@ -209,4 +209,10 @@ docker tag source_image_name:tag target_image_name:tag
 ```
 Here tag represents the version of the dcoker image
 
+**18. To rename conatainer name**
+```
+docker rename my_container my_new_container
+```
+
+
 
