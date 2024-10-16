@@ -94,7 +94,7 @@ CMD ["nginx", "-g", "daemon off;"]
 `RUN` instruction runs at the time of image creation <br>
 `CMD` instruction runs at the time of container creation
 
-* Whatever the command we give in `CMD` instruction it should run container for infinite times
+Whatever the command we give in `CMD` instruction it should run container for infinite times
 
 
 
