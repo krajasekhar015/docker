@@ -91,7 +91,7 @@ CMD ["nginx", "-g", "daemon off;"]
 * Pull the image using `docker pull username/image-name:version`
 
 > Interview Question: RUN vs CMD <br>
-`RUN` instruction runs at the time of image creation 
+`RUN` instruction runs at the time of image creation <br>
 `CMD` instruction runs at the time of container creation
 
 * Whatever the command we give in `CMD` instruction it should run container for infinite times
