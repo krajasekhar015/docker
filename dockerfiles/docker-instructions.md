@@ -262,12 +262,12 @@ docker build -t arg:v1 --build-arg course=docker
 * You can use `ARG` instruction before `FROM` instruction in one special case i.e., to supply version to the bash image 
 * `ARG` instruction before `FROM` instruction is only valid until FROM, it can't be accessed after FROM instruction
 
-**How can I access ARG values inside container?**
+**How can I access ARG values inside container?** <br>
 We can set arg value to env variable
 ```
 ENV duration=$duration
 ```
-**Interview Questions**
+**Interview Questions** <br>
 RUN vs CMD  |  CMD vs ENTRYPOINT  |  ADD vs COPY  |  ARG vs ENV
 
 **13. ONBUILD**
