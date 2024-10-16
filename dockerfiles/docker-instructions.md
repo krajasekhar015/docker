@@ -281,6 +281,6 @@ ONBUILD trigger-instruction
 ```
 ONBUILD COPY index.html /usr/share/nginx/html/index.html
 ```
-***Explanation**
+**Explanation**
 * Here, onbuild instruction runs only, when any user uses the image and it will throw an error saying that copy their own index.html to that location.
 * To test this, create a folder with `index.html` file and `Dockerfile` and in `Dockerfile` use base image as our image 
