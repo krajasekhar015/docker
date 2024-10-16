@@ -84,6 +84,19 @@ CMD ["nginx", "-g", "daemon off;"]
 
 > We need to re-build image everytime when the code gets changed
 
+**Pushing our image to dockerhub**
+* The format to push the image is `username/image-name:version`
+* We need to login to dockerhub from the command prompt using `docker login -u username` and enter password
+* Push the image using `docker push username/image-name:version`
+* Pull the image using `docker pull username/image-name:version`
+
+> Interview Question: RUN vs CMD <br>
+`RUN` instruction runs at the time of image creation 
+`CMD` instruction runs at the time of container creation
+
+* Whatever the command we give in `CMD` instruction it should run container for infinite times
+
+
 
 
 
