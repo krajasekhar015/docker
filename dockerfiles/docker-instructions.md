@@ -46,7 +46,7 @@ RUN command
 RUN dnf install nginx -y 
 ```
 
-**CMD** : Specifies the default command to run when a container is started from the image
+**3. CMD** : Specifies the default command to run when a container is started from the image
 
 * `CMD` instruction sets the command to be executed when running a container from an image
 * It runs at the time of container creation
@@ -81,7 +81,7 @@ CMD ["nginx", "-g", "daemon off;"]
 * `docker run` represents container creation --> Here `CMD` instruction will execute 
     * *command:* `docker run image-name:version` This command will run in foreground
     * *command:* `docker run -d image-name:version` If we specify `-d` flag then it will run in background 
-    
+
 > We need to re-build image everytime when the code gets changed
 
 
