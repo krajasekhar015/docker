@@ -60,10 +60,11 @@ After applying this command, it will not get refelected immediately. So, exit on
 ```
 docker ps
 ```
+Here, it will list running containers
 ```
 docker ps -a
 ```
-Here, `-a` represents all
+Here, `-a` represents all, which means it list all Docker containers (both running and stopped)
 ```
 docker ps -a -q
 ```
