@@ -156,13 +156,34 @@ ENV course="devOps with AWS" \
 * Now, if we check the sleep command has been executed here and it will run for 100 seconds and get exited
 * Within this 100 seconds, we can login to the container `docker exec -it containerid bash` and we can see environment variables which we have passed using `env` 
 
+**7. COPY** : Copies files or directories from the host machine to the image
+The `COPY` instruction copies new files or directories from <src> and adds them to the filesystem of the image at the path <dest>
+
+```
+COPY src dest
+```
+
+**Example**
+```
+COPY index.html /usr/share/nginx/html/index.html
+```
+Here, the index.html file should be in the place where dockerfile exists otherwise it can't access it
+
+* Now, if we run `docker run -d -p 8080:80 copy:v1` and browse the IP address in browse, we get our index.html over there
+
+**8. ADD** : Similar to `COPY
+* The `COPY` instruction copies new files or directories from <src> and adds them to the filesystem of the image at the path <dest>
+* It also supports extracting tar files and fetching files from URLs
+```
+ADD src dest
+```
+
+**Example**
+```
+ADD 
 
 
 
-* **COPY** : Copies files or directories from the host machine to the image
-* **ADD** : Similar to `COPY`, but also supports extracting tar files and fetching files from URLs
-* 
-* **ENTRYPOINT** : Configures a container to run as an executable. It allows you to set default parameters for the container
-* 
-* 
-* **WORKDIR** : Sets the working directory for subsequent instructions
+
+**ENTRYPOINT** : Configures a container to run as an executable. It allows you to set default parameters for the container
+**WORKDIR** : Sets the working directory for subsequent instructions
