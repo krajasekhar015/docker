@@ -96,9 +96,35 @@ CMD ["nginx", "-g", "daemon off;"]
 
 Whatever the command we give in `CMD` instruction it should run container for infinite times
 
+**4. LABEL** : key-value pair
+* The `LABEL` instruction adds metadata to an image (description, owner, project)
+* `LABELS` are used to filter the images
+* `LABEL` instruction won't create any functionality but only adds information to your image
 
+```
+LABEL key=value
+```
 
+**Example**
+```
+LABEL author="raja sekhar" \
+      company="joindevops" \
+      topic="dockerfiles"
+```
 
+**Filtering Docker Images**
+```
+docker images -f 'label=company=joindevops'
+```
+
+Using `docker inspect imageid` we can see the labels that we specified
+
+> `MAINTAINER` instruction has been deprecated and `LABEL` instruction is much more flexible version of MAINTAINER instruction
+
+**5. EXPOSE** : 
+* The `EXPOSE` instruction informs Docker that the container listens on the specified network ports at runtime
+* You can specify whether the port listens on TCP or UDP, and the default is TCP if you don't specify a protocol
+* 
 
 
 * **COPY** : Copies files or directories from the host machine to the image
@@ -106,5 +132,5 @@ Whatever the command we give in `CMD` instruction it should run container for in
 * 
 * **ENTRYPOINT** : Configures a container to run as an executable. It allows you to set default parameters for the container
 * **ENV** : Sets environment variables in the image
-* **EXPOSE** : Documents the port that the container listens on at runtime. This does not actually publish the port; it’s mainly for documentation purposes
+* 
 * **WORKDIR** : Sets the working directory for subsequent instructions
