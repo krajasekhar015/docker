@@ -144,12 +144,12 @@ docker run -d image-name
 ```
 Here, `-d` represents detached mode. When this flag is used, the container runs in the background, allowing you to continue using the terminal.
 
-**10. To run a container in background by setting name**
+**11. To run a container in background by setting name**
 ```
 docker run -d --name container-name image-name
 ```
  
-**11. To access specific ports**
+**12. To access specific ports**
 > How can we access nginx running inside the container?
 
 * Container is like a nano/mini server. It also have 0-65,535 ports
@@ -171,7 +171,7 @@ Now, we can access nginx in the browser.
 
 Using one image, we can create many containers. We can place different websites in different containers using one image.
 
-**12. To login to container**
+**13. To login to container**
 > How to get access to running container?
 
 ```
@@ -185,12 +185,12 @@ Now, we are inside the container
 * Create a simple index.html with command `echo "<h1>Hi, Iam from CONATAINER</h1>" > index.html`
 * Now, if we access it on browser, we will get this message `Hi, Iam from CONATAINER` on the screen
 
-**13. To get full details of container**
+**14. To get full details of container**
 ```
 docker inspect container-id
 ```
 
-**14. To get logs of container**
+**15. To get logs of container**
 ```
 docker logs container-id
 ```
@@ -199,7 +199,7 @@ docker logs -f container-id
 ```
 Here, `-f` stands for "follow". It allows you to view the logs in real-time, meaning you can see new log entries as they are generated
 
-**15. To set name for container**
+**16. To set name for container**
 ```
 docker run -d -p host-port:container-port --name container-name image-name
 ```
@@ -207,7 +207,7 @@ By default, docker will set random name to container by picking two names from d
 
 We can check everything by using container name
 
-**16. To build docker image**
+**17. To build docker image**
 ```
 docker build -t image-name:version .
 ```
@@ -216,13 +216,13 @@ Here,
 * `-t` represents tagging
 * We can give any name (image-name) and any version
 
-**17. To re-tag dockerimage**
+**18. To re-tag dockerimage**
 ```
 docker tag source_image_name:tag target_image_name:tag
 ```
 Here tag represents the version of the dcoker image
 
-**18. To rename conatainer name**
+**19. To rename conatainer name**
 ```
 docker rename my_container my_new_container
 ```
